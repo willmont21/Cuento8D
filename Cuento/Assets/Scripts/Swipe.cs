@@ -6,8 +6,6 @@ public class Swipe : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    
-    private bool tap, swipeLeft, swipeRight, swipeUp, swipeDown;
     void Start()
     {
         
