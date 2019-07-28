@@ -77,6 +77,10 @@
     <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioSource.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\GridManager.cs" />
+    <Compile Include="Assets\Scripts\Swipe.cs" />
+    <Compile Include="Assets\SwipeDetector\SwipeDetector.cs" />
+    <Compile Include="Assets\SwipeDetector\SwipeDrawer.cs" />
+    <Compile Include="Assets\SwipeDetector\SwipeLogger.cs" />
     <None Include="Assets\ResonanceAudio\Demos\Environment\ResonanceAudioDemo\CubeRoomUnlitGrayscale.shader" />
     <None Include="Assets\ResonanceAudio\Shaders\ResonanceAudioSurfaceMaterial.shader" />
     <Reference Include="Unity.Timeline.Editor">
