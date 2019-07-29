@@ -5,9 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class Swipe : MonoBehaviour
 {
+
   
     private Vector2 startTouchPosition, endTouchPosition;
     public string nombre;
+
+    // Start is called before the first frame update
+    
+    void Start()
+    {
+        
+    }
+
 
     // Update is called once per frame
     private void Update()
