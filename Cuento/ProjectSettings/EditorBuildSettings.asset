@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wolf_Found.unity
     guid: d97b2f961a7fa12478ee25084ba99ef3
+  - enabled: 1
+    path: Assets/Scenes/empezar.unity
+    guid: a966d92f27300984e86377cc38d444d4
+  - enabled: 1
+    path: Assets/Scenes/Portada.unity
+    guid: cfbe0f1392f97ea4296beacd6017d84c
+  - enabled: 1
+    path: Assets/Scenes/Wolf_Lost.unity
+    guid: d67283f23088ee044b74406f9425ec60
   m_configObjects: {}

@@ -62,6 +62,6 @@ public class Controller : MonoBehaviour
        clipUp.GetComponent<AudioSource>().Stop();
       
        Debug.Log("you have clicked this button");   
-        SceneManager.LoadScene("Wolf_Found", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Wolf_Found");
      }
 }

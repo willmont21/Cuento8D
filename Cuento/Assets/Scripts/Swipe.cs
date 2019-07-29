@@ -1,21 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Swipe : MonoBehaviour
 {
-    // Start is called before the first frame update
-    
-    
-    private bool tap, swipeLeft, swipeRight, swipeUp, swipeDown;
-    void Start()
-    {
-        
-    }
+  
+    private Vector2 startTouchPosition, endTouchPosition;
+    public string nombre;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+            startTouchPosition = Input.GetTouch(0).position;
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        {
+            endTouchPosition = Input.GetTouch(0).position;
+
+            /*if ((endTouchPosition.x < startTouchPosition.x))
+                //transform.position = new Vector2(transform.position.x - 1.75f, transform.position.y);
+                 SceneManager.LoadScene("Wolf_Found", LoadSceneMode.Additive);*/
+
+            if ((endTouchPosition.x > startTouchPosition.x))
+               // transform.position = new Vector2(transform.position.x + 1.75f, transform.position.y);
+                SceneManager.LoadScene(nombre);
+        }
+    }  
 }
