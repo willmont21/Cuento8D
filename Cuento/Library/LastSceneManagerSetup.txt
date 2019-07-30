@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Wolf_Lost.unity
+- path: Assets/Scenes/Wolf_Description.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

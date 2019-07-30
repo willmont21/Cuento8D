@@ -472,9 +472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849f3c4f0528cd845b1d411124326964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguiente: Video
+  siguiente: Wolf_Menu
   anterior: Wolf_Lost
-  arriba: Wolf_Description
+  arriba: 
+  abajo: 
   detectSwipeOnlyAfterRelease: 0
   minDistanceForSwipe: 20
 --- !u!4 &1370279669
