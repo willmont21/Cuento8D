@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wolf_Lost.unity
     guid: d67283f23088ee044b74406f9425ec60
+  - enabled: 1
+    path: Assets/Scenes/Wolf_Description.unity
+    guid: b9331ca420551bd4db7b1e9fe51a5178
+  - enabled: 1
+    path: Assets/Scenes/Video.unity
+    guid: fa883f7626acc974f85ee47fe9ff9831
   m_configObjects: {}

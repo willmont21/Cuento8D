@@ -5,36 +5,128 @@ using UnityEngine.SceneManagement;
 
 public class Swipe : MonoBehaviour
 {
+    private Vector2 fingerDownPosition;
+    private Vector2 fingerUpPosition;
+   public string siguiente,anterior,arriba,abajo;
+   
+   
+    [SerializeField]
+    private bool detectSwipeOnlyAfterRelease = false;
 
-  
-    private Vector2 startTouchPosition, endTouchPosition;
-    public string nombre;
+    [SerializeField]
+    private float minDistanceForSwipe = 20f;
 
-    // Start is called before the first frame update
-    
-    void Start()
-    {
-        
-    }
+   
 
-
-    // Update is called once per frame
     private void Update()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-            startTouchPosition = Input.GetTouch(0).position;
-
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        foreach (Touch touch in Input.touches)
         {
-            endTouchPosition = Input.GetTouch(0).position;
+            if (touch.phase == TouchPhase.Began)
+            {
+                fingerUpPosition = touch.position;
+                fingerDownPosition = touch.position;
+            }
 
-            /*if ((endTouchPosition.x < startTouchPosition.x))
-                //transform.position = new Vector2(transform.position.x - 1.75f, transform.position.y);
-                 SceneManager.LoadScene("Wolf_Found", LoadSceneMode.Additive);*/
+            if (!detectSwipeOnlyAfterRelease && touch.phase == TouchPhase.Moved)
+            {
+                fingerDownPosition = touch.position;
+                DetectSwipe();
+            }
 
-            if ((endTouchPosition.x > startTouchPosition.x))
-               // transform.position = new Vector2(transform.position.x + 1.75f, transform.position.y);
-                SceneManager.LoadScene(nombre);
+            if (touch.phase == TouchPhase.Ended)
+            {
+                fingerDownPosition = touch.position;
+                DetectSwipe();
+            }
         }
-    }  
+    }
+
+    private void DetectSwipe()
+    {
+        if (SwipeDistanceCheckMet())
+        {
+            if (IsVerticalSwipe())
+            {
+                  object myObject = new Object();
+                  myObject  = fingerDownPosition.y - fingerUpPosition.y > 0 ? SwipeDirection.Up : SwipeDirection.Down;
+                  string myObjectString = myObject.ToString();
+                 if (myObjectString == "Up"){
+                      if (arriba != ""){
+                        SceneManager.LoadScene(arriba);
+                    }
+                    
+                    }
+                 else  if (abajo != ""){
+                  
+                     //SceneManager.LoadScene(anterior);
+                 }
+               
+               
+               
+               
+               
+               
+            }
+            else
+            {
+            object myObject = new Object();
+
+         
+             myObject  = fingerDownPosition.x - fingerUpPosition.x > 0 ? SwipeDirection.Right : SwipeDirection.Left;
+  
+            // string dir = System.Enum.Parse(typeof(direction.Right), direction);
+            //  string description =  System.Enum.GetName(typeof(direction), 3);
+          
+            
+             string myObjectString = myObject.ToString();
+                 if (myObjectString == "Right"){
+                     if (siguiente != ""){
+                  
+                     SceneManager.LoadScene(siguiente);
+                     }
+           
+                 }
+                 else  if (anterior != ""){
+                  
+                     SceneManager.LoadScene(anterior);
+                 }
+               
+               
+               
+            }
+            fingerUpPosition = fingerDownPosition;
+        }
+    }
+
+    private bool IsVerticalSwipe()
+    {
+        return VerticalMovementDistance() > HorizontalMovementDistance();
+    }
+
+    private bool SwipeDistanceCheckMet()
+    {
+        return VerticalMovementDistance() > minDistanceForSwipe || HorizontalMovementDistance() > minDistanceForSwipe;
+    }
+
+    private float VerticalMovementDistance()
+    {
+        return Mathf.Abs(fingerDownPosition.y - fingerUpPosition.y);
+    }
+
+    private float HorizontalMovementDistance()
+    {
+        return Mathf.Abs(fingerDownPosition.x - fingerUpPosition.x);
+    }
+
+    public enum SwipeDirection
+{
+    Up,
+    Down,
+    Left,
+    Right
 }
+    
+    
+}
+
