@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Wolf_Description.unity
+- path: Assets/Scenes/23DMono.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
