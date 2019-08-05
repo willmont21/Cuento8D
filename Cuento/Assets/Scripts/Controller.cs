@@ -8,52 +8,124 @@ public class Controller : MonoBehaviour
 {
     // Start is called before the first frame update
     public Button[] buttons;
-    public GameObject clipIz, clipDown, clipDer, clipUp;
-     int randomFil;
+      public Button[] buttonsArea;
+    private GameObject clipIz, clipDown, clipDer, clipUp;
+   int randomFil;
+string nameArea;
+
+
+
     void Start()
     {
-         randomFil=Random.Range(0,11);
-        
-         Debug.Log(randomFil); 
+         randomFil=Random.Range(0,3);
+
            clipIz = GameObject.FindGameObjectWithTag("AudioIz");
             clipDown = GameObject.FindGameObjectWithTag("AudioAbajo");
             clipDer = GameObject.FindGameObjectWithTag("AudioDer");
             clipUp = GameObject.FindGameObjectWithTag("AudioUp");
-               
-             if( randomFil== 0 || randomFil== 7 || randomFil== 5 || randomFil== 10) {
-              clipIz.GetComponent<AudioSource>().Play();
-              }
-          if( randomFil== 8 || randomFil== 11) {
-              clipDown.GetComponent<AudioSource>().Play();
-              }
-         
-            if( randomFil== 2 || randomFil== 4  || randomFil== 9) {
-              clipDer.GetComponent<AudioSource>().Play();
-              }
-              
-               if( randomFil== 1 || randomFil== 3  || randomFil== 5 || randomFil== 6) {
-              clipUp.GetComponent<AudioSource>().Play();
-              }
-         
-         
+           
+              StartCoroutine(ToEsperar());  
+             
+            Debug.Log(buttons.Length);
+            
+            
+            
          for (int i = 0; i < buttons.Length; i++)
          {
-           Debug.Log(randomFil); 
+         
              Button btns = buttons[i].GetComponent<Button>();
+               Debug.Log(i);
+                 Debug.Log(randomFil);
              if( i== randomFil) {
-              
+               
              btns.onClick.AddListener(TaskOnClick);
+             
+             Button btnArea =  buttonsArea[i].GetComponent<Button>();
+             buttonsArea[i].onClick.AddListener(AjustarVolumen);
+              
+               switch (i)
+                 {
+                    case 0:
+                    nameArea="Arriba";
+                      break;
+                    case 1:
+                      nameArea="Abajo";
+                      break;                
+                    case 2:
+                      break;
+                        nameArea="Izquierda";
+                     default:
+                        nameArea="Derecha";
+                     break;
+                      }
+      
+      
+      
               }
          }
+         
+              
+       
+                
+       
+         
+         
     }
 
     // Update is called once per frame
     void Update()
     {
         
-          
-          
+       
     }
+    
+      IEnumerator ToEsperar() {
+        yield return new WaitForSeconds (13);
+        if( randomFil== 0) {
+              clipUp.GetComponent<AudioSource>().Play();
+              clipUp.GetComponent<AudioSource>().volume = 0.8F;
+           
+              }
+          if( randomFil==1) {
+              clipDown.GetComponent<AudioSource>().Play();
+              clipDown.GetComponent<AudioSource>().volume = 0.8F;
+              }
+         
+            if( randomFil== 2) {
+              clipDer.GetComponent<AudioSource>().Play();
+              clipDer.GetComponent<AudioSource>().volume = 0.8F;
+              }
+              
+               if( randomFil== 3) {
+                clipIz.GetComponent<AudioSource>().Play();
+                clipIz.GetComponent<AudioSource>().volume = 0.8F;
+              }
+         
+      
+    }
+    
+    public void AjustarVolumen()
+     {
+     float ajuste= 1.0F;
+          if( randomFil== 0) {
+              clipUp.GetComponent<AudioSource>().volume = ajuste;
+           
+              }
+            if( randomFil==1) {
+              clipDown.GetComponent<AudioSource>().volume = ajuste;
+              }
+         
+            if( randomFil== 2) {
+              clipDer.GetComponent<AudioSource>().volume = ajuste;
+              }
+              
+               if( randomFil== 3) {
+                clipIz.GetComponent<AudioSource>().volume = ajuste;
+              }
+     }
+     
+     
+    
     public void TaskOnClick()
      {
       clipIz.GetComponent<AudioSource>().Stop();
@@ -62,6 +134,6 @@ public class Controller : MonoBehaviour
        clipUp.GetComponent<AudioSource>().Stop();
       
        Debug.Log("you have clicked this button");   
-        SceneManager.LoadScene("Wolf_Found");
+        SceneManager.LoadScene(6);
      }
 }

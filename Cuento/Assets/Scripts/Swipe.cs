@@ -7,7 +7,7 @@ public class Swipe : MonoBehaviour
 {
     private Vector2 fingerDownPosition;
     private Vector2 fingerUpPosition;
-   public string siguiente,anterior,arriba,abajo;
+   public int siguiente,anterior,arriba,abajo;
    
    
     [SerializeField]
@@ -52,12 +52,12 @@ public class Swipe : MonoBehaviour
                   myObject  = fingerDownPosition.y - fingerUpPosition.y > 0 ? SwipeDirection.Up : SwipeDirection.Down;
                   string myObjectString = myObject.ToString();
                  if (myObjectString == "Up"){
-                      if (arriba != ""){
+                      if (arriba != 0){
                         SceneManager.LoadScene(arriba);
                     }
                     
                     }
-                 else  if (abajo != ""){
+                 else  if (abajo != 0){
                   
                      //SceneManager.LoadScene(anterior);
                  }
@@ -81,13 +81,13 @@ public class Swipe : MonoBehaviour
             
              string myObjectString = myObject.ToString();
                  if (myObjectString == "Right"){
-                     if (siguiente != ""){
+                     if (siguiente != 0){
                   
                      SceneManager.LoadScene(siguiente);
                      }
            
                  }
-                 else  if (anterior != ""){
+                 else  if (anterior != 0){
                   
                      SceneManager.LoadScene(anterior);
                  }
