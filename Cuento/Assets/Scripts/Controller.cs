@@ -11,7 +11,7 @@ public class Controller : MonoBehaviour
       public Button[] buttonsArea;
     private GameObject clipIz, clipDown, clipDer, clipUp;
    int randomFil;
-string nameArea;
+int posi;
 
 
 
@@ -35,32 +35,17 @@ string nameArea;
          
              Button btns = buttons[i].GetComponent<Button>();
                Debug.Log(i);
-                 Debug.Log(randomFil);
-             if( i== randomFil) {
-               
-             btns.onClick.AddListener(TaskOnClick);
-             
+               Debug.Log(randomFil);
              Button btnArea =  buttonsArea[i].GetComponent<Button>();
-             buttonsArea[i].onClick.AddListener(AjustarVolumen);
+         
+             if( i== randomFil) {
+             btns.onClick.AddListener(TaskOnClick);
+              buttonsArea[i].onClick.AddListener(SubirVolumen);
+              }
               
-               switch (i)
-                 {
-                    case 0:
-                    nameArea="Arriba";
-                      break;
-                    case 1:
-                      nameArea="Abajo";
-                      break;                
-                    case 2:
-                      break;
-                        nameArea="Izquierda";
-                     default:
-                        nameArea="Derecha";
-                     break;
-                      }
-      
-      
-      
+            else
+              {
+                buttonsArea[i].onClick.AddListener(BajarVolumen);
               }
          }
          
@@ -83,47 +68,72 @@ string nameArea;
         yield return new WaitForSeconds (13);
         if( randomFil== 0) {
               clipUp.GetComponent<AudioSource>().Play();
-              clipUp.GetComponent<AudioSource>().volume = 0.8F;
+              clipUp.GetComponent<AudioSource>().volume = 0.7F;
            
               }
           if( randomFil==1) {
               clipDown.GetComponent<AudioSource>().Play();
-              clipDown.GetComponent<AudioSource>().volume = 0.8F;
+              clipDown.GetComponent<AudioSource>().volume = 0.7F;
               }
          
             if( randomFil== 2) {
               clipDer.GetComponent<AudioSource>().Play();
-              clipDer.GetComponent<AudioSource>().volume = 0.8F;
+              clipDer.GetComponent<AudioSource>().volume = 0.7F;
               }
               
                if( randomFil== 3) {
                 clipIz.GetComponent<AudioSource>().Play();
-                clipIz.GetComponent<AudioSource>().volume = 0.8F;
+                clipIz.GetComponent<AudioSource>().volume = 0.7F;
               }
          
       
     }
     
-    public void AjustarVolumen()
+    public void SubirVolumen()
      {
-     float ajuste= 1.0F;
-          if( randomFil== 0) {
-              clipUp.GetComponent<AudioSource>().volume = ajuste;
+         if( randomFil== 0) {
+              clipUp.GetComponent<AudioSource>().Play();
+              clipUp.GetComponent<AudioSource>().volume = 1.0F;
            
               }
-            if( randomFil==1) {
-              clipDown.GetComponent<AudioSource>().volume = ajuste;
+          if( randomFil==1) {
+              clipDown.GetComponent<AudioSource>().Play();
+              clipDown.GetComponent<AudioSource>().volume = 1.0F;
               }
          
             if( randomFil== 2) {
-              clipDer.GetComponent<AudioSource>().volume = ajuste;
+              clipDer.GetComponent<AudioSource>().Play();
+              clipDer.GetComponent<AudioSource>().volume = 1.0F;
               }
               
                if( randomFil== 3) {
-                clipIz.GetComponent<AudioSource>().volume = ajuste;
+                clipIz.GetComponent<AudioSource>().Play();
+                clipIz.GetComponent<AudioSource>().volume = 1.0F;
               }
      }
      
+      public void BajarVolumen()
+     {
+        if( randomFil== 0) {
+              clipUp.GetComponent<AudioSource>().Play();
+              clipUp.GetComponent<AudioSource>().volume = 0.2F;
+           
+              }
+          if( randomFil==1) {
+              clipDown.GetComponent<AudioSource>().Play();
+              clipDown.GetComponent<AudioSource>().volume = 0.2F;
+              }
+         
+            if( randomFil== 2) {
+              clipDer.GetComponent<AudioSource>().Play();
+              clipDer.GetComponent<AudioSource>().volume = 0.2F;
+              }
+              
+               if( randomFil== 3) {
+                clipIz.GetComponent<AudioSource>().Play();
+                clipIz.GetComponent<AudioSource>().volume = 0.2F;
+              }
+     }
      
     
     public void TaskOnClick()
