@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class Swipe : MonoBehaviour
 {
     private Vector2 fingerDownPosition;
+    private AudioSource[] allAudioSources;
     private Vector2 fingerUpPosition;
    public int siguiente,anterior,arriba,abajo;
-   
+   private AudioSource instruccion;
+   public AudioClip AudioDes;
+
    
     [SerializeField]
     private bool detectSwipeOnlyAfterRelease = false;
@@ -16,7 +19,12 @@ public class Swipe : MonoBehaviour
     [SerializeField]
     private float minDistanceForSwipe = 20f;
 
-   
+    void Start()
+      {
+      instruccion=GetComponent<AudioSource>();
+       instruccion.clip = AudioDes;
+     
+      }
 
     private void Update()
     {
@@ -41,9 +49,17 @@ public class Swipe : MonoBehaviour
             }
         }
     }
+    
+    void StopAllAudio() {
+     allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+     foreach( AudioSource audioS in allAudioSources) {
+         audioS.Stop();
+     }
+ }
 
     private void DetectSwipe()
     {
+       instruccion.Stop();
         if (SwipeDistanceCheckMet())
         {
             if (IsVerticalSwipe())
@@ -57,8 +73,9 @@ public class Swipe : MonoBehaviour
                     }
                     
                     }
-                 else  if (abajo != 0){
-                  
+                 else {
+                StopAllAudio();
+                  instruccion.Play();
                      //SceneManager.LoadScene(anterior);
                  }
                
@@ -127,6 +144,7 @@ public class Swipe : MonoBehaviour
     Right
 }
     
+  
     
 }
 

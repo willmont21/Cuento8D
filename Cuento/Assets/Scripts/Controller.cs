@@ -8,33 +8,27 @@ public class Controller : MonoBehaviour
 {
     // Start is called before the first frame update
     public Button[] buttons;
-      public Button[] buttonsArea;
-    private GameObject clipIz, clipDown, clipDer, clipUp;
-   int randomFil;
-int posi;
-
+    public Button[] buttonsArea;
+   // private GameObject clipIz, clipDown, clipDer, clipUp;
+    int randomFil;
+    int posi;
+   private AudioSource sonido,instruccion;
+   public AudioClip WolfDerecha, WolfDown, WolfIzquierda, WolfUp, EncuentraMamiLoba;
 
 
     void Start()
     {
          randomFil=Random.Range(0,3);
-
-           clipIz = GameObject.FindGameObjectWithTag("AudioIz");
-            clipDown = GameObject.FindGameObjectWithTag("AudioAbajo");
-            clipDer = GameObject.FindGameObjectWithTag("AudioDer");
-            clipUp = GameObject.FindGameObjectWithTag("AudioUp");
-           
+         instruccion=GetComponent<AudioSource>();
+         sonido=GetComponent<AudioSource>();
+         instruccion.clip = EncuentraMamiLoba;
+           instruccion.Play();
               StartCoroutine(ToEsperar());  
-             
-            Debug.Log(buttons.Length);
-            
-            
-            
+        
          for (int i = 0; i < buttons.Length; i++)
          {
          
              Button btns = buttons[i].GetComponent<Button>();
-               Debug.Log(i);
                Debug.Log(randomFil);
              Button btnArea =  buttonsArea[i].GetComponent<Button>();
          
@@ -66,24 +60,20 @@ int posi;
     
       IEnumerator ToEsperar() {
         yield return new WaitForSeconds (13);
-        if( randomFil== 0) {
-              clipUp.GetComponent<AudioSource>().Play();
-              clipUp.GetComponent<AudioSource>().volume = 0.7F;
+           if( randomFil== 0) {
+           sonido.clip = WolfUp;
            
               }
           if( randomFil==1) {
-              clipDown.GetComponent<AudioSource>().Play();
-              clipDown.GetComponent<AudioSource>().volume = 0.7F;
+             sonido.clip = WolfDown;
               }
          
-            if( randomFil== 2) {
-              clipDer.GetComponent<AudioSource>().Play();
-              clipDer.GetComponent<AudioSource>().volume = 0.7F;
+          if( randomFil== 2) {
+           sonido.clip = WolfIzquierda;   
               }
               
-               if( randomFil== 3) {
-                clipIz.GetComponent<AudioSource>().Play();
-                clipIz.GetComponent<AudioSource>().volume = 0.7F;
+          if( randomFil== 3) {
+             sonido.clip = WolfDerecha;
               }
          
       
@@ -91,7 +81,9 @@ int posi;
     
     public void SubirVolumen()
      {
-         if( randomFil== 0) {
+     sonido.volume = 1.0F;
+     sonido.Play();
+        /* if( randomFil== 0) {
               clipUp.GetComponent<AudioSource>().Play();
               clipUp.GetComponent<AudioSource>().volume = 1.0F;
            
@@ -109,12 +101,12 @@ int posi;
                if( randomFil== 3) {
                 clipIz.GetComponent<AudioSource>().Play();
                 clipIz.GetComponent<AudioSource>().volume = 1.0F;
-              }
+              }*/
      }
      
       public void BajarVolumen()
      {
-        if( randomFil== 0) {
+       /* if( randomFil== 0) {
               clipUp.GetComponent<AudioSource>().Play();
               clipUp.GetComponent<AudioSource>().volume = 0.2F;
            
@@ -132,16 +124,19 @@ int posi;
                if( randomFil== 3) {
                 clipIz.GetComponent<AudioSource>().Play();
                 clipIz.GetComponent<AudioSource>().volume = 0.2F;
-              }
+              }*/
+               sonido.volume = 0.2F;
+               sonido.Play();
      }
      
     
     public void TaskOnClick()
      {
-      clipIz.GetComponent<AudioSource>().Stop();
+     sonido.Stop();
+      /*clipIz.GetComponent<AudioSource>().Stop();
       clipDown.GetComponent<AudioSource>().Stop();
        clipDer.GetComponent<AudioSource>().Stop();
-       clipUp.GetComponent<AudioSource>().Stop();
+       clipUp.GetComponent<AudioSource>().Stop();*/
       
        Debug.Log("you have clicked this button");   
         SceneManager.LoadScene(6);
