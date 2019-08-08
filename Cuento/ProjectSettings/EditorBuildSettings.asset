@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/7ILobos.unity
     guid: 9d431b3579d407842b37815ab7ee9023
+  - enabled: 1
+    path: Assets/Scenes/9OLoba.unity
+    guid: 69af5d8cd7f31a740b9dbe9dff620945
   m_configObjects: {}
