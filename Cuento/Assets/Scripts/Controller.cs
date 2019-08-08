@@ -27,9 +27,10 @@ public class Controller : MonoBehaviour
         
          for (int i = 0; i < buttons.Length; i++)
          {
-         
+          Debug.Log("hay estos" + buttons.Length);
              Button btns = buttons[i].GetComponent<Button>();
-               Debug.Log(randomFil);
+               Debug.Log("hay" +randomFil);
+               
              Button btnArea =  buttonsArea[i].GetComponent<Button>();
          
              if( i== randomFil) {
