@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "898673180388",
+    "firebase_url": "https://doyecuentos.firebaseio.com",
+    "project_id": "doyecuentos",
+    "storage_bucket": "doyecuentos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898673180388:android:6d91ac3dddd73cdb",
+        "android_client_info": {
+          "package_name": "com.Dyysam.Teamwebbi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898673180388-kljsjd3v6mrptlpcheofc9h2geoeotvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn0nC8p-TpaMEdXqaWI3QvyJ7UuRS6qQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898673180388-kljsjd3v6mrptlpcheofc9h2geoeotvl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

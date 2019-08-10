@@ -12,19 +12,52 @@ public class Controller : MonoBehaviour
    // private GameObject clipIz, clipDown, clipDer, clipUp;
     int randomFil;
     int posi;
-   private AudioSource sonido,instruccion;
-   public AudioClip WolfDerecha, WolfDown, WolfIzquierda, WolfUp, EncuentraMamiLoba;
+   private AudioSource sonido;
+   public AudioClip sonidoDerecha, sonidoDown, sonidoIzquierda, sonidoUp, Encuentra;
 
 
     void Start()
     {
-         randomFil=Random.Range(0,3);
-         instruccion=GetComponent<AudioSource>();
          sonido=GetComponent<AudioSource>();
-         instruccion.clip = EncuentraMamiLoba;
-           instruccion.Play();
-              StartCoroutine(ToEsperar());  
+         sonido.clip = Encuentra;
+         sonido.Play();  
+         randomFil=Random.Range(0,3);
+         StartCoroutine(ToEsperar());  
+         
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         
+       
+    }
+    
+      IEnumerator ToEsperar() {
+  
+        yield return new WaitForSeconds (13);
+           if( randomFil== 0) {
+           sonido.clip = sonidoUp;
+            sonido.Play();
+           
+              }
+          if( randomFil==1) {
+             sonido.clip = sonidoDown;
+              sonido.Play();
+              }
+         
+          if( randomFil== 2) {
+           sonido.clip = sonidoIzquierda;
+            sonido.Play();
+              }
+              
+          if( randomFil== 3) {
+             sonido.clip = sonidoDerecha;
+              sonido.Play();
+              }
+              
+              
+               
          for (int i = 0; i < buttons.Length; i++)
          {
           Debug.Log("hay estos" + buttons.Length);
@@ -50,33 +83,6 @@ public class Controller : MonoBehaviour
        
          
          
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-       
-    }
-    
-      IEnumerator ToEsperar() {
-        yield return new WaitForSeconds (13);
-           if( randomFil== 0) {
-           sonido.clip = WolfUp;
-           
-              }
-          if( randomFil==1) {
-             sonido.clip = WolfDown;
-              }
-         
-          if( randomFil== 2) {
-           sonido.clip = WolfIzquierda;   
-              }
-              
-          if( randomFil== 3) {
-             sonido.clip = WolfDerecha;
-              }
-         
       
     }
     
@@ -84,61 +90,19 @@ public class Controller : MonoBehaviour
      {
      sonido.volume = 1.0F;
      sonido.Play();
-        /* if( randomFil== 0) {
-              clipUp.GetComponent<AudioSource>().Play();
-              clipUp.GetComponent<AudioSource>().volume = 1.0F;
-           
-              }
-          if( randomFil==1) {
-              clipDown.GetComponent<AudioSource>().Play();
-              clipDown.GetComponent<AudioSource>().volume = 1.0F;
-              }
-         
-            if( randomFil== 2) {
-              clipDer.GetComponent<AudioSource>().Play();
-              clipDer.GetComponent<AudioSource>().volume = 1.0F;
-              }
-              
-               if( randomFil== 3) {
-                clipIz.GetComponent<AudioSource>().Play();
-                clipIz.GetComponent<AudioSource>().volume = 1.0F;
-              }*/
+
      }
      
       public void BajarVolumen()
      {
-       /* if( randomFil== 0) {
-              clipUp.GetComponent<AudioSource>().Play();
-              clipUp.GetComponent<AudioSource>().volume = 0.2F;
-           
-              }
-          if( randomFil==1) {
-              clipDown.GetComponent<AudioSource>().Play();
-              clipDown.GetComponent<AudioSource>().volume = 0.2F;
-              }
-         
-            if( randomFil== 2) {
-              clipDer.GetComponent<AudioSource>().Play();
-              clipDer.GetComponent<AudioSource>().volume = 0.2F;
-              }
-              
-               if( randomFil== 3) {
-                clipIz.GetComponent<AudioSource>().Play();
-                clipIz.GetComponent<AudioSource>().volume = 0.2F;
-              }*/
-               sonido.volume = 0.2F;
-               sonido.Play();
+      sonido.volume = 0.2F;
+      sonido.Play();
      }
      
     
     public void TaskOnClick()
      {
      sonido.Stop();
-      /*clipIz.GetComponent<AudioSource>().Stop();
-      clipDown.GetComponent<AudioSource>().Stop();
-       clipDer.GetComponent<AudioSource>().Stop();
-       clipUp.GetComponent<AudioSource>().Stop();*/
-      
        Debug.Log("you have clicked this button");   
         SceneManager.LoadScene(6);
      }
