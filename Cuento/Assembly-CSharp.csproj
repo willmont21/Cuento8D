@@ -77,8 +77,11 @@
     <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioSource.cs" />
     <Compile Include="Assets\Scripts\BotonPresionado.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\ControllerDescription.cs" />
     <Compile Include="Assets\Scripts\GridManager.cs" />
     <Compile Include="Assets\Scripts\InicioScreen.cs" />
+    <Compile Include="Assets\Scripts\MonkeyController.cs" />
+    <Compile Include="Assets\Scripts\SnakeController.cs" />
     <Compile Include="Assets\Scripts\Swipe.cs" />
     <Compile Include="Assets\Scripts\TapController.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-storage-unity\maven-metadata.xml" />
