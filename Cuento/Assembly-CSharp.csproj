@@ -62,19 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ResonanceAudio\Demos\Scripts\DemoPlayerController.cs" />
-    <Compile Include="Assets\ResonanceAudio\Demos\Scripts\ResonanceAudioDemo\ResonanceAudioDemoCubeController.cs" />
-    <Compile Include="Assets\ResonanceAudio\Demos\Scripts\ResonanceAudioDemo\ResonanceAudioDemoManager.cs" />
-    <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudio.cs" />
-    <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioAcousticMesh.cs" />
-    <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioListener.cs" />
-    <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioMaterialMap.cs" />
-    <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioMaterialMapper.cs" />
-    <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioMaterialMapperUpdater.cs" />
-    <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioReverbProbe.cs" />
-    <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioRoom.cs" />
-    <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioRoomManager.cs" />
-    <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioSource.cs" />
     <Compile Include="Assets\Scripts\BotonPresionado.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\ControllerDescription.cs" />
@@ -84,11 +71,6 @@
     <Compile Include="Assets\Scripts\SnakeController.cs" />
     <Compile Include="Assets\Scripts\Swipe.cs" />
     <Compile Include="Assets\Scripts\TapController.cs" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-storage-unity\maven-metadata.xml" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
-    <None Include="Assets\ResonanceAudio\Demos\Environment\ResonanceAudioDemo\CubeRoomUnlitGrayscale.shader" />
-    <None Include="Assets\ResonanceAudio\Shaders\ResonanceAudioSurfaceMaterial.shader" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -286,33 +268,6 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.0f2/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.App">
-      <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Auth">
-      <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Platform">
-      <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Storage">
-      <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Assets/Firebase/Plugins/Firebase.Storage.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.TaskExtension">
-      <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.MiniJson">
-      <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Sharpen">
-      <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Compat">
-      <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Tasks">
-      <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>C:/Users/Xavier/Documents/Espol/10.-Semestre Final/Integradora/Developer/new/Cuento8D/Cuento/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
