@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/9OLoba.unity
     guid: 69af5d8cd7f31a740b9dbe9dff620945
   - enabled: 1
+    path: Assets/Scenes/12IPata.unity
+    guid: 0f4621d781f230440b4b0a5681e589d2
+  - enabled: 1
+    path: Assets/Scenes/13APata.unity
+    guid: 908822bde70da7f46b7c45846f9f6a5b
+  - enabled: 1
     path: Assets/Scenes/15IPatito.unity
     guid: 8c7415d999c673c4d939ea21ccfc9638
   - enabled: 1

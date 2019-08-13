@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/5ILoba.unity
+- path: Assets/Scenes/21IMono.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

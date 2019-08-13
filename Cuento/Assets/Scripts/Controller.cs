@@ -12,8 +12,9 @@ public class Controller : MonoBehaviour
    // private GameObject clipIz, clipDown, clipDer, clipUp;
     int randomFil;
     int posi;
-   private AudioSource sonido;
-   public AudioClip sonidoDerecha, sonidoDown, sonidoIzquierda, sonidoUp, Encuentra;
+    public int scene;
+    private AudioSource sonido;
+    public AudioClip sonidoDerecha, sonidoDown, sonidoIzquierda, sonidoUp, Encuentra;
 
 
     void Start()
@@ -104,6 +105,6 @@ public class Controller : MonoBehaviour
      {
      sonido.Stop();
        Debug.Log("you have clicked this button");   
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(scene);
      }
 }

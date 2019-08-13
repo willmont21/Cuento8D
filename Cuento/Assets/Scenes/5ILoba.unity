@@ -882,7 +882,6 @@ GameObject:
   - component: {fileID: 826379525}
   - component: {fileID: 826379524}
   - component: {fileID: 826379523}
-  - component: {fileID: 826379527}
   - component: {fileID: 826379526}
   m_Layer: 0
   m_Name: Main Camera
@@ -1052,25 +1051,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &826379527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826379522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 849f3c4f0528cd845b1d411124326964, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  siguiente: 0
-  anterior: 3
-  arriba: 0
-  abajo: 0
-  AudioDes: {fileID: 8300000, guid: a9f7004f4e745cf4da5ac911b2e7e127, type: 3}
-  detectSwipeOnlyAfterRelease: 0
-  minDistanceForSwipe: 20
 --- !u!1 &842838220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,6 +2068,7 @@ MonoBehaviour:
   - {fileID: 842838222}
   - {fileID: 289126531}
   - {fileID: 806972990}
+  scene: 6
   sonidoDerecha: {fileID: 8300000, guid: 2202c61b63730f942afd1602895a135e, type: 3}
   sonidoDown: {fileID: 8300000, guid: c23b2b01a7c05b54697487286177c55f, type: 3}
   sonidoIzquierda: {fileID: 8300000, guid: ba0651f87e9ca0048a58edb9fe20b54e, type: 3}
