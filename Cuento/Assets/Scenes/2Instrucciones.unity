@@ -370,8 +370,8 @@ GameObject:
   - component: {fileID: 1880646583}
   - component: {fileID: 1880646582}
   - component: {fileID: 1880646581}
-  - component: {fileID: 1880646584}
   - component: {fileID: 1880646585}
+  - component: {fileID: 1880646584}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -466,7 +466,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a35344198be236045a384c5667bc5f98, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 87b5f65fab9194641b57b555a744ad18, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

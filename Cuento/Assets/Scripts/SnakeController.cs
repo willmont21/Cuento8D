@@ -13,9 +13,11 @@ public class SnakeController : MonoBehaviour
  public Vector2 Hrange = Vector2.zero;
  public Vector2 Vrange = Vector2.zero;
  public Button  snakeController; 
-
+ public AudioClip snake;
  private bool action= false;
  private int cont=0;
+  private AudioSource instruccion;
+  
       
      void Start () {
      myBody = GetComponent<Rigidbody2D> ();
@@ -23,6 +25,9 @@ public class SnakeController : MonoBehaviour
           vel.x =  speed;
           myBody.velocity = vel;
         Button btnSnake =  snakeController.GetComponent<Button>();
+        instruccion=GetComponent<AudioSource>();
+       instruccion.clip = snake;
+       StartCoroutine(ToWait());
          btnSnake.onClick.AddListener(AlejarSerpiente);
 	}
 	
@@ -38,10 +43,19 @@ public class SnakeController : MonoBehaviour
       }
 	}
     
+      IEnumerator ToWait() {
+            instruccion.volume = 1.0F;
+             instruccion.Play();
+             yield return new WaitForSeconds (9);
+    
+        }
+            
     
     public void AlejarSerpiente()
      {
      cont++;
+     instruccion.volume = instruccion.volume-0.1F;
+     instruccion.Play();
      if(cont==7) {
       action=true;
       StartCoroutine(retiradaSerpiente());  
@@ -50,7 +64,7 @@ public class SnakeController : MonoBehaviour
       
     IEnumerator retiradaSerpiente() {  
         yield return new WaitForSeconds (5);
-        SceneManager.LoadScene(10);
+        SceneManager.LoadScene(14);
      }
     
    

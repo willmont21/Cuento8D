@@ -35,13 +35,13 @@ public class InicioScreen : MonoBehaviour
     }
     
       IEnumerator ToBienvenidos() {
-        yield return new WaitForSeconds (40);
+        yield return new WaitForSeconds (16);
         sceneNumber=2;
         SceneManager.LoadScene(2);
     }
     
       IEnumerator ToEmpezar() {
-        yield return new WaitForSeconds (16);
+        yield return new WaitForSeconds (6);
         sceneNumber=3;
         SceneManager.LoadScene(3);
     }
