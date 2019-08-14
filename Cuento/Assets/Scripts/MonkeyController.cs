@@ -7,22 +7,24 @@ using UnityEngine.SceneManagement;
 public class MonkeyController : MonoBehaviour
 {
       // Start is called before the first frame update
-    public Button monkey,snake,duck,wolf;
+    public Button monkey, snake, duck, wolf;
     public int scene;
-     public AudioClip sonidoDuck, sonidoWolf, sonidoSnake, sonidoMonkey;
-      private AudioSource sonido;
+    private AudioSource sonido;
+    private  Button b1, b2, b3, b4;
+    public AudioClip sonidoDuck, sonidoWolf, sonidoSnake, sonidoMonkey;
+  
     void Start()
     {
-              sonido=GetComponent<AudioSource>();
-               sonido.clip = sonidoMonkey;
+              sonido = GetComponent<AudioSource>();
+              
               StartCoroutine(ToWaitx2());    
-              Button b1 = monkey.GetComponent<Button>();
+              b1 = monkey.GetComponent<Button>();
               b1.onClick.AddListener(Encontro);
-              Button b2 = snake.GetComponent<Button>();
+              b2 = snake.GetComponent<Button>();
               b2.onClick.AddListener(snakeSound);
-              Button b3 = duck.GetComponent<Button>();
+              b3 = duck.GetComponent<Button>();
               b3.onClick.AddListener(duckSound);
-              Button b4 = wolf.GetComponent<Button>();
+              b4 = wolf.GetComponent<Button>();
               b4.onClick.AddListener(WolfSound);
               
               sonido.Play();
@@ -34,25 +36,23 @@ public class MonkeyController : MonoBehaviour
     { 
       
     }
+    
       IEnumerator ToWait() {
-             sonido.Play();
+      sonido.Play();
              yield return new WaitForSeconds (4);
              SceneManager.LoadScene(scene);
-         
         }
         
         IEnumerator ToWaitx2() {
-        
-             sonido.Play();
-             yield return new WaitForSeconds (4);
-            
-         
+             yield return new WaitForSeconds (10);
+      
         }
+        
     public void Encontro()
      {
         sonido.clip = sonidoMonkey;
              // sonido.Play();
-            StartCoroutine(ToWait());
+        StartCoroutine(ToWait());
        
      }
      
