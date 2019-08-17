@@ -2068,7 +2068,7 @@ MonoBehaviour:
   - {fileID: 842838222}
   - {fileID: 289126531}
   - {fileID: 806972990}
-  scene: 12
+  scene: 13
   sonidoDerecha: {fileID: 8300000, guid: 2cb456962cb947040965552bf027c7a9, type: 3}
   sonidoDown: {fileID: 8300000, guid: f153918c8a370ac4cbe067d26bba3ebd, type: 3}
   sonidoIzquierda: {fileID: 8300000, guid: 83bd152cd6f38b3498fe4c4d7e089781, type: 3}

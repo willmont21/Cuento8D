@@ -466,10 +466,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   siguiente: 8
-  anterior: 5
+  anterior: 0
   arriba: 0
   abajo: 0
-  AudioDes: {fileID: 8300000, guid: 86f7591507cc235429d17cc1da7f8156, type: 3}
+  AudioDes: {fileID: 8300000, guid: 3ed375116ab23804aac72fd6eb7fd074, type: 3}
   detectSwipeOnlyAfterRelease: 0
   minDistanceForSwipe: 20
 --- !u!82 &1287018582

@@ -27,7 +27,7 @@ public class SnakeController : MonoBehaviour
         Button btnSnake =  snakeController.GetComponent<Button>();
         instruccion=GetComponent<AudioSource>();
        instruccion.clip = snake;
-       StartCoroutine(ToWait());
+      // StartCoroutine(ToWait());
          btnSnake.onClick.AddListener(AlejarSerpiente);
 	}
 	
@@ -64,7 +64,7 @@ public class SnakeController : MonoBehaviour
       
     IEnumerator retiradaSerpiente() {  
         yield return new WaitForSeconds (5);
-        SceneManager.LoadScene(14);
+        SceneManager.LoadScene(16);
      }
     
    

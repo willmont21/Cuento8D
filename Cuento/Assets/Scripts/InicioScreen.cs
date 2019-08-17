@@ -19,6 +19,8 @@ public class InicioScreen : MonoBehaviour
         if(sceneNumber==2){
         StartCoroutine(ToEmpezar());
         } 
+        
+        
     
     }
 
@@ -29,22 +31,24 @@ public class InicioScreen : MonoBehaviour
     }
     
     IEnumerator ToInstrucciones() {
-        yield return new WaitForSeconds (6);
+        yield return new WaitForSeconds (2);
         sceneNumber=1;
         SceneManager.LoadScene(1);
     }
     
       IEnumerator ToBienvenidos() {
-        yield return new WaitForSeconds (16);
+        yield return new WaitForSeconds (11);
         sceneNumber=2;
         SceneManager.LoadScene(2);
     }
     
       IEnumerator ToEmpezar() {
-        yield return new WaitForSeconds (6);
+        yield return new WaitForSeconds (5);
         sceneNumber=3;
         SceneManager.LoadScene(3);
     }
+    
+    
      
     
 }

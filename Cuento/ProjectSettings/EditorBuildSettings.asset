@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/6ALoba.unity
     guid: 711597352ae456d4bbe1577de77113d5
   - enabled: 1
+    path: Assets/Scenes/7Instruccion.unity
+    guid: 1d73e5882f4d129488955a7c5e1c8cf1
+  - enabled: 1
     path: Assets/Scenes/7ILobos.unity
     guid: 9d431b3579d407842b37815ab7ee9023
   - enabled: 1
@@ -45,18 +48,27 @@ EditorBuildSettings:
     path: Assets/Scenes/13APata.unity
     guid: 908822bde70da7f46b7c45846f9f6a5b
   - enabled: 1
+    path: Assets/Scenes/15IInstruccionPatito.unity
+    guid: db9654111013a6f4aaa544babc15c412
+  - enabled: 1
     path: Assets/Scenes/15IPatito.unity
     guid: 8c7415d999c673c4d939ea21ccfc9638
   - enabled: 1
     path: Assets/Scenes/16APatito.unity
     guid: 3b88135f200b0db4dab3ce002805daf7
   - enabled: 1
+    path: Assets/Scenes/20EncuentraMonitoInstruccion.unity
+    guid: 2ef0142a21519e14988be5ac72790149
+  - enabled: 1
     path: Assets/Scenes/20EMonito.unity
     guid: c1f9a65939ba79442a2a7de7b4ba0b93
   - enabled: 1
-    path: Assets/Scenes/20IMono.unity
-    guid: ca1de5221f6d9f744ac24f457f04c91d
+    path: Assets/Scenes/21LianasInstruccionMono.unity
+    guid: 9a33860cdc0e30241a1cc5020c32e51d
   - enabled: 1
     path: Assets/Scenes/21IMono.unity
     guid: 234b3bdef0824be40a7c00a1a120926e
+  - enabled: 1
+    path: Assets/Scenes/21EMono.unity
+    guid: 54211fc5c6b160e47bce59363dfeadae
   m_configObjects: {}

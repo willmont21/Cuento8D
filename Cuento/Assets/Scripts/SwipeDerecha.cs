@@ -11,6 +11,7 @@ public class SwipeDerecha : MonoBehaviour
     private int vez=0;
    private AudioSource instruccion;
    public AudioClip AudioRight;
+      public AudioClip bien;
 
    
     [SerializeField]
@@ -34,8 +35,10 @@ public class SwipeDerecha : MonoBehaviour
         }
             
         IEnumerator ToWaitx2() {
+           instruccion.clip = bien;
           instruccion.Play();
-        yield return new WaitForSeconds (9);
+        yield return new WaitForSeconds (3);
+           SceneManager.LoadScene(6);
          // StopAllAudio();
         
             }
@@ -75,7 +78,7 @@ public class SwipeDerecha : MonoBehaviour
 
     private void DetectSwipe()
     {
-       instruccion.Stop();
+
         if (SwipeDistanceCheckMet())
         {
             if (IsVerticalSwipe())
@@ -84,10 +87,10 @@ public class SwipeDerecha : MonoBehaviour
                   myObject  = fingerDownPosition.y - fingerUpPosition.y > 0 ? SwipeDirection.Up : SwipeDirection.Down;
                   string myObjectString = myObject.ToString();
                  if (myObjectString == "Up"){
-                         StartCoroutine(ToWait());
+                        
                     }
                  else {
-                  StartCoroutine(ToWait());
+               
                     
                  }
                
@@ -110,25 +113,18 @@ public class SwipeDerecha : MonoBehaviour
             
              string myObjectString = myObject.ToString();
                  if (myObjectString == "Right"){
-                      StopAllAudio();
-                      pasar=true;
-                      SceneManager.LoadScene(6);
+                      StartCoroutine(ToWaitx2());
+                   
                  }
                  else  {
                
-                   StartCoroutine(ToWait());
-                
-                  
                  }
                
                
                
             }
             fingerUpPosition = fingerDownPosition;
-            if(pasar==false){
-                 StartCoroutine(ToWaitx2());
-                  
-                 }
+           
         }
     }
 

@@ -11,8 +11,11 @@ public class SwipeDown : MonoBehaviour
 
    private AudioSource instruccion;
    private int vez=0;
+     private int toques=0;
    public AudioClip AudioDown;
+    public AudioClip bien;
    private bool pasar=false;
+    private bool detect=true;
 
    
     [SerializeField]
@@ -30,14 +33,17 @@ public class SwipeDown : MonoBehaviour
       }
  
           IEnumerator ToWait() {
-             instruccion.Play();
              yield return new WaitForSeconds (9);
              vez=2;
-        }
+           }
+           
+          
             
         IEnumerator ToWaitx2() {
+           instruccion.clip = bien;
           instruccion.Play();
-        yield return new WaitForSeconds (9);
+        yield return new WaitForSeconds (3);
+         SceneManager.LoadScene(4);
          // StopAllAudio();
         
             }
@@ -78,8 +84,7 @@ public class SwipeDown : MonoBehaviour
 
     private void DetectSwipe()
     {
-      
-       instruccion.Stop();
+   
         if (SwipeDistanceCheckMet())
         {
             if (IsVerticalSwipe())
@@ -88,31 +93,25 @@ public class SwipeDown : MonoBehaviour
                   myObject  = fingerDownPosition.y - fingerUpPosition.y > 0 ? SwipeDirection.Up : SwipeDirection.Down;
                   string myObjectString = myObject.ToString();
                  if (myObjectString == "Up"){
-             
+
                     }
                  else {
-                StopAllAudio();
-                pasar=true;
-                     SceneManager.LoadScene(4);
+                      StartCoroutine(ToWaitx2());
+                    
                  }
             }
             else
             {
             object myObject = new Object();
-
-         
-             myObject  = fingerDownPosition.x - fingerUpPosition.x > 0 ? SwipeDirection.Right : SwipeDirection.Left;
+            myObject  = fingerDownPosition.x - fingerUpPosition.x > 0 ? SwipeDirection.Right : SwipeDirection.Left;
              string myObjectString = myObject.ToString();
                  if (myObjectString == "Right"){
-                
+
                  }
    
             }
             fingerUpPosition = fingerDownPosition;
-            if(pasar==false){
-                 StartCoroutine(ToWaitx2());
-                  
-                 }
+            
         }
     }
 

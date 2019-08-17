@@ -25,7 +25,7 @@ public class MonkeyLianas : MonoBehaviour
      cont++;
     
      if(cont==7) {
-     SceneManager.LoadScene(17);
+     SceneManager.LoadScene(21);
        }
       }
       

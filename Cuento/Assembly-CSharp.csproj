@@ -65,8 +65,10 @@
     <Compile Include="Assets\Scripts\BotonPresionado.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\ControllerDescription.cs" />
+    <Compile Include="Assets\Scripts\FoundMonkey.cs" />
     <Compile Include="Assets\Scripts\GridManager.cs" />
     <Compile Include="Assets\Scripts\InicioScreen.cs" />
+    <Compile Include="Assets\Scripts\Instrucciones.cs" />
     <Compile Include="Assets\Scripts\MonkeyController.cs" />
     <Compile Include="Assets\Scripts\MonkeyLianas.cs" />
     <Compile Include="Assets\Scripts\SnakeController.cs" />

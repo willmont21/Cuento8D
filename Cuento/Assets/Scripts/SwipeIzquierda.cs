@@ -11,6 +11,7 @@ public class SwipeIzquierda : MonoBehaviour
    private AudioSource instruccion;
        private int vez=0;
    public AudioClip AudioLeft;
+   public AudioClip bien;
 
    
     [SerializeField]
@@ -28,14 +29,17 @@ public class SwipeIzquierda : MonoBehaviour
       }
       
         IEnumerator ToWait() {
+
              instruccion.Play();
              yield return new WaitForSeconds (9);
              vez=2;
         }
             
         IEnumerator ToWaitx2() {
+          instruccion.clip = bien;
           instruccion.Play();
-        yield return new WaitForSeconds (9);
+        yield return new WaitForSeconds (3);
+          SceneManager.LoadScene(5);
          // StopAllAudio();
         
             }
@@ -75,7 +79,7 @@ public class SwipeIzquierda : MonoBehaviour
 
     private void DetectSwipe()
     {
-       instruccion.Stop();
+
         if (SwipeDistanceCheckMet())
         {
             if (IsVerticalSwipe())
@@ -84,12 +88,9 @@ public class SwipeIzquierda : MonoBehaviour
                   myObject  = fingerDownPosition.y - fingerUpPosition.y > 0 ? SwipeDirection.Up : SwipeDirection.Down;
                   string myObjectString = myObject.ToString();
                  if (myObjectString == "Up"){
-                     
-                   StartCoroutine(ToWait());
                     }
                  else {
                 
-                   StartCoroutine(ToWait());
                  }
  
             }
@@ -100,23 +101,17 @@ public class SwipeIzquierda : MonoBehaviour
              string myObjectString = myObject.ToString();
                  if (myObjectString == "Right"){
                   
-                    StartCoroutine(ToWait());
                  }
                  else  {
-                 StopAllAudio();
-                pasar=true;
-                  SceneManager.LoadScene(5);
-                  
+                    StartCoroutine(ToWaitx2());
+      
                  }
                
                
                
             }
             fingerUpPosition = fingerDownPosition;
-            if(pasar==false){
-                 StartCoroutine(ToWaitx2());
-                  
-                 }
+        
         }
     }
 

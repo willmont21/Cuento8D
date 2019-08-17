@@ -37,7 +37,7 @@ public class TapController : MonoBehaviour
         if (otherObject.tag == "loba")
         {
 
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(10);
         }
 
 

@@ -243,7 +243,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f17e14af0680fcd41ad2da99fb0e6be4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e478d7fac40c9414aa7560741c135382, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -552,6 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9f3a1e5b1c59549abf55a931b53045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioLeft: {fileID: 8300000, guid: 82181f75845f4354c9a373111baf3fca, type: 3}
+  AudioLeft: {fileID: 8300000, guid: 3ed375116ab23804aac72fd6eb7fd074, type: 3}
+  bien: {fileID: 8300000, guid: f40e3bc65f051aa4eb98a1a309ae5da6, type: 3}
   detectSwipeOnlyAfterRelease: 0
   minDistanceForSwipe: 20
