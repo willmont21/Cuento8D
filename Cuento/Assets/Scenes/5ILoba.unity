@@ -2073,7 +2073,7 @@ MonoBehaviour:
   sonidoDown: {fileID: 8300000, guid: c23b2b01a7c05b54697487286177c55f, type: 3}
   sonidoIzquierda: {fileID: 8300000, guid: ba0651f87e9ca0048a58edb9fe20b54e, type: 3}
   sonidoUp: {fileID: 8300000, guid: b49b4aadc6a28ec49be7f4e430002def, type: 3}
-  Encuentra: {fileID: 8300000, guid: df0406535d11c4e4e8de7719e7fa761c, type: 3}
+  Encuentra: {fileID: 8300000, guid: 31df8f0f132bc9c4b9e9afc84226e7f4, type: 3}
 --- !u!4 &1988166640
 Transform:
   m_ObjectHideFlags: 0
