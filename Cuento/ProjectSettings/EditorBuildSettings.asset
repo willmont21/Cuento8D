@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/1Inicio.unity
+    guid: 5b36fb7db07b25e4c99f0778c69558b3
+  - enabled: 1
+    path: Assets/Scenes/2Empezar.unity
+    guid: a966d92f27300984e86377cc38d444d4
+  - enabled: 1
+    path: Assets/Scenes/2Instrucciones.unity
+    guid: 3d041ee3adc496345b2d9fb5c1438874
+  - enabled: 1
+    path: Assets/Scenes/2InstruccionesAbajo.unity
+    guid: b341a4e084c9f4042b34fd17206042dd
+  - enabled: 1
+    path: Assets/Scenes/2InstruccionesIzquierda.unity
+    guid: 20697bfb9e8cab4409488b98e7656383
+  - enabled: 1
+    path: Assets/Scenes/2InstruccionesDerecha.unity
+    guid: 2b257491a53c7a04597bd0e50b3aba23
+  - enabled: 1
+    path: Assets/Scenes/capsula1.unity
+    guid: 248e427a64cccbf47a8cf8b33a6bfdca
+  - enabled: 1
+    path: Assets/Scenes/5ILoba.unity
+    guid: 05d581fec04e54f42bcda329bb382aae
+  - enabled: 1
+    path: Assets/Scenes/6ALoba.unity
+    guid: 711597352ae456d4bbe1577de77113d5
+  - enabled: 1
+    path: Assets/Scenes/7Instruccion.unity
+    guid: 1d73e5882f4d129488955a7c5e1c8cf1
+  - enabled: 1
+    path: Assets/Scenes/7ILobos.unity
+    guid: 9d431b3579d407842b37815ab7ee9023
+  - enabled: 1
+    path: Assets/Scenes/9OLoba.unity
+    guid: 69af5d8cd7f31a740b9dbe9dff620945
+  - enabled: 1
+    path: Assets/Scenes/DescripcionLoba.unity
+    guid: d43f1ad1330e9c44f9e4cbf6306bfc3a
+  - enabled: 1
+    path: Assets/Scenes/capsula2.unity
+    guid: e704792b11af87746a8b52d518001c88
+  - enabled: 1
+    path: Assets/Scenes/12IPata.unity
+    guid: 0f4621d781f230440b4b0a5681e589d2
+  - enabled: 1
+    path: Assets/Scenes/13APata.unity
+    guid: 908822bde70da7f46b7c45846f9f6a5b
+  - enabled: 1
+    path: Assets/Scenes/15IInstruccionPatito.unity
+    guid: db9654111013a6f4aaa544babc15c412
+  - enabled: 1
+    path: Assets/Scenes/15IPatito.unity
+    guid: 8c7415d999c673c4d939ea21ccfc9638
+  - enabled: 1
+    path: Assets/Scenes/16APatito.unity
+    guid: 3b88135f200b0db4dab3ce002805daf7
+  - enabled: 1
+    path: Assets/Scenes/17OPata.unity
+    guid: fde3f354cac088b43ae5a9363eedd411
+  - enabled: 1
+    path: Assets/Scenes/DescripcionPata.unity
+    guid: 6b906df70d4577d4f9b5062224d0f13b
+  - enabled: 1
+    path: Assets/Scenes/capsula3.unity
+    guid: adabd8d71f3a19144b702694497fe928
+  - enabled: 1
+    path: Assets/Scenes/20EncuentraMonitoInstruccion.unity
+    guid: 2ef0142a21519e14988be5ac72790149
+  - enabled: 1
+    path: Assets/Scenes/20EMonito.unity
+    guid: c1f9a65939ba79442a2a7de7b4ba0b93
+  - enabled: 1
+    path: Assets/Scenes/21LianasInstruccionMono.unity
+    guid: 9a33860cdc0e30241a1cc5020c32e51d
+  - enabled: 1
+    path: Assets/Scenes/21IMono.unity
+    guid: 234b3bdef0824be40a7c00a1a120926e
+  - enabled: 1
+    path: Assets/Scenes/21EMono.unity
+    guid: 54211fc5c6b160e47bce59363dfeadae
+  - enabled: 1
+    path: Assets/Scenes/22OMono.unity
+    guid: c9502bbdb082cd24fb43bf0b7b5f41e8
+  - enabled: 1
+    path: Assets/Scenes/DescripcionMono.unity
+    guid: 2245a9340f87cdd42af6ec9de7bef173
+  - enabled: 1
+    path: Assets/Scenes/capsula4.unity
+    guid: 4a7ed1994c68f8d4a88e59a28d1562c2
+  - enabled: 1
+    path: Assets/Scenes/25ISerpienteIntro.unity
+    guid: 3934647c9e101034ca714a3bfe416a42
+  - enabled: 1
+    path: Assets/Scenes/25ISerpiente.unity
+    guid: 111913145dc7f1e40952ba6f0e105f51
+  - enabled: 1
+    path: Assets/Scenes/capsula5.unity
+    guid: 2dc313248c2e1674fa03d725b5c7a6f0
+  - enabled: 1
+    path: Assets/Scenes/Jingle.unity
+    guid: cf08c33e1ab86f241b3c13344e2749fa
+  - enabled: 1
+    path: Assets/Scenes/28Fin.unity
+    guid: 33c6802d4c9d57c4f84c1a77c20cfbe1
+  m_configObjects: {}
